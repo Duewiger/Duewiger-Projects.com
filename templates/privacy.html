@@ -1,0 +1,92 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Duewiger Projects - Datenschutz{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="content">
+    <h2 class="text-content">
+        Datenschutzerklärung der InsurNative App der Duewiger Easy UG
+    </h2>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        Verantwortlich für die Verarbeitung der personenbezogenen Daten im Rahmen dieser App ist:
+    </p>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        Duewiger Easy UG (haftungsbeschränkt)<br>Inhaber und Geschäftsführer: Kilian Düwiger<br>Rissener Dorfstraße 51<br>22559 Hamburg<br>E-Mail: datenschutz@duewiger.com<br>Telefon: +49 (0) 172 745 27 73<br>Website: www.duewiger-projects.com
+    </p>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        Registergericht: Amtsgericht Hamburg<br>
+        Handelsregister: HRB 183240<br>
+        Steuernummer: 42/716/02591<br>
+    </p>
+    <br><br>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        <strong>1. Allgemeine Informationen</strong><br><br>
+        Der Schutz Ihrer personenbezogenen Daten hat für uns einen hohen Stellenwert. In dieser Datenschutzerklärung informieren wir Sie darüber, welche personenbezogenen Daten im Rahmen der Nutzung unserer App erhoben, verarbeitet und gespeichert werden, sowie über Ihre Rechte als betroffene Person.
+    </p>
+    <br><br>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        <strong>2. Zweck der App und der Datenerhebung</strong><br><br>
+        Unsere App ermöglicht es den Nutzern, Versicherungsdokumente per Kamera zu scannen und automatisch übersetzen zu lassen. Die Nutzung der Kamera ist erforderlich, um Dokumente zu erfassen, die dann über ein Backend in der AWS-Cloud verarbeitet und gespeichert werden. Die Übersetzungen erfolgen über die ChatGPT API, und die Dokumente werden in einer AWS-Datenbank und in AWS-S3-Buckets gespeichert.
+    </p>
+    <br><br>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        <strong>3. Erhebung und Verarbeitung personenbezogener Daten</strong><br><br>
+        a. Kamera-Zugriff
+        Die App benötigt Zugriff auf die Kamera, um Dokumente zu scannen. Dieser Zugriff erfolgt ausschließlich zu dem Zweck, das jeweilige Dokument zu erfassen und zur weiteren Verarbeitung an unser Backend zu senden.
+        <br><br>
+        b. Verarbeitung durch das Django-Backend auf AWS
+        Die gescannten Dokumente werden nach der Aufnahme an unser Django-Backend gesendet, das auf AWS-Servern in Docker-Containern läuft. Dort werden die Daten verarbeitet, um die Übersetzung zu ermöglichen.
+        <br><br>
+        c. Speicherung in AWS-Datenbanken und S3-Buckets
+        Die gescannten Dokumente und deren Übersetzungen werden in unserer AWS-Datenbank gespeichert. Zudem werden die übersetzten Dokumente in AWS S3-Buckets gespeichert, um den Nutzern den Zugriff auf die übersetzten Dokumente zu ermöglichen. Diese Speicherung erfolgt auf unbestimmte Zeit oder bis der Nutzer die Löschung der Daten anfordert.
+        <br><br>
+        d. Übermittlung an die ChatGPT API
+        Die gescannten Dokumente werden zur Übersetzung an die ChatGPT API übermittelt. Die Daten werden nur für den Zweck der Übersetzung verwendet und anschließend an unser Backend zurückgesendet. Wir haben keinen Einfluss auf die Datenverarbeitung durch die ChatGPT API, die ein externer Dienst ist.
+        <br><br>
+        e. Lokale Speicherung
+        Zusätzlich zur Speicherung auf unseren Servern wird den Nutzern die Möglichkeit geboten, die übersetzten Dokumente als PDF-Dateien lokal auf ihrem Gerät zu speichern.
+    </p>
+    <br><br>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        <strong>4. Weitergabe von Daten</strong><br><br>
+        Es erfolgt keine Weitergabe der erfassten Daten an Dritte, außer für die Verarbeitung durch die ChatGPT API und die Speicherung in der AWS-Cloud. Die Daten werden ausschließlich für den oben beschriebenen Zweck verarbeitet und weder zu Werbezwecken noch zu Analysezwecken verwendet.
+    </p>
+    <br><br>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        <strong>5. Ihre Rechte als betroffene Person</strong><br><br>
+        Sie haben das Recht:
+        <br><br>
+        Auskunft: Informationen über die von uns verarbeiteten personenbezogenen Daten zu erhalten.
+        Berichtigung: Unrichtige Daten korrigieren zu lassen.
+        Löschung: Die Löschung Ihrer bei uns gespeicherten Daten zu verlangen, sofern diese nicht mehr benötigt werden.
+        Widerspruch: Der Verarbeitung Ihrer Daten zu widersprechen.
+        Zur Ausübung dieser Rechte können Sie uns unter den oben genannten Kontaktdaten erreichen.
+    </p>
+    <br><br>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        <strong>6. Datensicherheit</strong><br><br>
+        Wir setzen technische und organisatorische Maßnahmen ein, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Verlust oder Zerstörung zu schützen. Die Verarbeitung der Daten erfolgt über verschlüsselte Verbindungen (z. B. SSL/TLS).
+    </p>
+    <br><br>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        <strong>7. Änderungen der Datenschutzerklärung</strong><br><br>
+        Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren, um sie an geänderte rechtliche Anforderungen oder neue Funktionen unserer App anzupassen.
+    </p>
+    <br><br>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        <strong>8. Kontakt</strong><br><br>
+        Falls Sie Fragen zu dieser Datenschutzerklärung haben oder Ihre Rechte ausüben möchten, können Sie uns über folgende Kontaktdaten erreichen:
+    </p>
+    <p class="text-start lh-sm fw-normal fs-3 text-content">
+        Duewiger Easy UG (haftungsbeschränkt)<br>
+        Inhaber und Geschäftsführer: Kilian Düwiger<br>
+        Rissener Dorfstraße 51<br>
+        22559 Hamburg<br>
+        E-Mail: datenschutz@duewiger.com<br>
+        Telefon: +49 (0) 172 745 27 73<br>
+    </p>
+    </div>
+</div>
+{% endblock content %}

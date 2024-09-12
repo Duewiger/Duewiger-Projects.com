@@ -1,0 +1,30 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Duewiger Projects - Entwickler{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <div class="content-developer">
+        <div class="card mx-auto mt-4 p-4 shadow-lg rounded bg-dark text-white" style="width: 36rem; border-color: #02c2d7;">
+            <img src="{% static '/images/Profilfoto_Kilian_Duewiger.jpeg' %}" class="card-img-top rounded-top" alt="Bild des Entwicklers Kilian Düwiger">
+            <div class="card-body">
+              <h3 class="card-title text-white">Kilian Düwiger</h3>
+              <p class="lead card-text text-white">Python-Entwickler mit mehr als 4 Jahren Erfahrung, spezialisiert auf Django, Flet und KI (ML/DL mit TensorFlow).</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="lead list-group-item bg-dark text-white border-light"><strong>Programmiersprachen:</strong><br>Python, SQL, *HTML, *CSS, JavaScript</li>
+              <li class="lead list-group-item bg-dark text-white border-light"><strong>Frameworks & Tools:</strong><br>Django, Flet, AWS, Google Cloud, Docker, Git, GitHub Actions, React, React Native</li>
+              <li class="lead list-group-item bg-dark text-white border-light"><strong>Datenbanken:</strong><br>PostgreSQL, MongoDB</li>
+            </ul>
+            <div class="card-body p-4">
+                <a href="https://github.com/Duewiger">
+                    <img src="{% static '/images/GitHub_Duewiger_Follow.png' %}" alt="GitHub" class="img-fluid w-100 rounded">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

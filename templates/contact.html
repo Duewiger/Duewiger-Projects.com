@@ -1,0 +1,16 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Duewiger Projects - Kontakt{% endblock title %}
+
+{% block content %}
+<div class="container my-5">
+  <h2 class="contact-headline">Kontaktieren Sie mich gerne per Mail</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <br/>
+    <input class="btn btn-outline-info submit-button" type="submit" value="Senden">
+  </form>
+</div>
+{% endblock content %}

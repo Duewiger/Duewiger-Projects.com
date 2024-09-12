@@ -1,0 +1,44 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Duewiger Projects - Software Development{% endblock title %}
+
+{% block content %}
+
+<div class="container mt-5">
+  <h2 class="display-4" style="color: #02c2d7;">Mein aktuelles Projekt</h2>
+  <p class="lead" style="color: #d3d3d3;">Weitere meiner Projekte finden Sie auf <a href="https://github.com/Duewiger" style="color: #02c2d7;">GitHub</a></p>
+</div>
+
+<!-- InsurNative Project -->
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col-lg-6 col-md-12 text-start">
+      <h1 class="display-5 fw-bold text-content-light">InsurNative</h1>
+      <p class="lead text-content-light" style="margin-bottom: 20px;">InsurNative ist eine mobile Anwendung, die mit Django für das Backend und React Native für das Frontend entwickelt wurde. Die Kernfunktionalität ermöglicht es Benutzern, ihre Versicherungsdokumente hochzuladen und zu verwalten, Inhalte mithilfe von KI-gestützten Diensten zu übersetzen und mit ihren Versicherungsberatern zu kommunizieren.</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4 align-items-center">
+        <a href="https://github.com/Duewiger/InsurNative" class="btn me-2">
+          <img src="{% static '/icons/github-mark-white.png' %}" alt="GitHub" style="max-width: 80px;">
+        </a>
+        <a href="" class="btn ms-3" onclick=playStoreState()>
+          <img src="{% static '/icons/GetItOnGooglePlay_Badge_Web_color_English.png' %}" alt="PlayStore" style="max-width: 160px;">
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 text-center mt-4 mt-lg-0">
+      <div class="video-container">
+        <iframe 
+          width="100%" 
+          height="500" 
+          src="https://www.youtube.com/embed/6nG6tJC-Y7A" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

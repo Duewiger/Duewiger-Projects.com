@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    command: >
+      sh -c "python manage.py collectstatic --noinput && gunicorn projects_website.wsgi:application --bind 0.0.0.0:8000"
+    volumes:
+      - .:/duewiger-projects.com
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - DEBUG=0

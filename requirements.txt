@@ -1,0 +1,14 @@
+asgiref==3.8.1
+boto3
+crispy-bootstrap5==2024.2
+Django==5.1
+django-crispy-forms==2.3
+django-recaptcha==4.0.0
+django-storages
+environs==11.0.0
+gunicorn
+marshmallow==3.22.0
+packaging==24.1
+python-dotenv==1.0.1
+sqlparse==0.5.1
+tzdata==2024.1

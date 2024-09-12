@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="alert alert-success" role="alert">
+            Ihre Nachricht wurde erfolgreich versandt.
+        </div>
+    </div>
+</div>
+
+<script>
+    "use strict";
+
+    const redirectPage = () => {
+        setTimeout(function () {
+            window.location.href = "{% url 'contact' %}";
+        }, 3000);
+    }
+
+    window.addEventListener('load', redirectPage);
+</script>
+{% endblock content %}
