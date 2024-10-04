@@ -1,44 +1,88 @@
 {% extends "_base.html" %}
 {% load static %}
 
-{% block title %}Duewiger Projects - Software Development{% endblock title %}
+{% block title %}Duewiger Projects - Full-Stack Software Development{% endblock title %}
 
 {% block content %}
 
-<div class="container mt-5">
-  <h2 class="display-4" style="color: #02c2d7;">Mein aktuelles Projekt</h2>
-  <p class="lead" style="color: #d3d3d3;">Weitere meiner Projekte finden Sie auf <a href="https://github.com/Duewiger" style="color: #02c2d7;">GitHub</a></p>
-</div>
+<section class="home" id="home">
+  <div class="home-content">
+    <h1>Hey, It's <span>Kilian</span></h1>
+    <h3 class="text-animation">I'm a <span></span></h3>
+    <p>Full-stack Python developer with C++ (CPython API) expertise and data science engineering. Backend specialization in Django and frontend with Flet (over 4 years).</p>
 
-<!-- InsurNative Project -->
-<div class="container">
-  <div class="row align-items-start">
-    <div class="col-lg-6 col-md-12 text-start">
-      <h1 class="display-5 fw-bold text-content-light">InsurNative</h1>
-      <p class="lead text-content-light" style="margin-bottom: 20px;">InsurNative ist eine mobile Anwendung, die mit Django für das Backend und React Native für das Frontend entwickelt wurde. Die Kernfunktionalität ermöglicht es Benutzern, ihre Versicherungsdokumente hochzuladen und zu verwalten, Inhalte mithilfe von KI-gestützten Diensten zu übersetzen und mit ihren Versicherungsberatern zu kommunizieren.</p>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4 align-items-center">
-        <a href="https://github.com/Duewiger/InsurNative" class="btn me-2">
-          <img src="{% static '/icons/github-mark-white.png' %}" alt="GitHub" style="max-width: 80px;">
-        </a>
-        <a href="" class="btn ms-3" onclick=playStoreState()>
-          <img src="{% static '/icons/GetItOnGooglePlay_Badge_Web_color_English.png' %}" alt="PlayStore" style="max-width: 160px;">
-        </a>
-      </div>
+    <div class="social-icons">
+      <a href="https://github.com/Duewiger"><i class='bx bxl-github'></i></a>
+      <a href="https://www.youtube.com/@Duewiger"><i class='bx bxl-youtube'></i></a>
+      <a href="https://www.linkedin.com/in/kilian-düwiger-6a235b328/"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://play.google.com"><i class='bx bxl-play-store'></i></a>
     </div>
-    <div class="col-lg-6 col-md-12 text-center mt-4 mt-lg-0">
-      <div class="video-container">
-        <iframe 
-          width="100%" 
-          height="500" 
-          src="https://www.youtube.com/embed/6nG6tJC-Y7A" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-      </div>
+
+    <div class="btn-group">
+      <a href="https://wa.me/+491727452773/?text=Hallo%20Herr%20Duewiger,%20gerne%20möchte%20ich%20%20Sie%20als%20Freelancer%20für%20die%20Entwicklung%20beauftragen." class="btn">Hire</a>
+      <a href="{% url 'contact' %}" class="btn">Contact</a>
     </div>
   </div>
-</div>
+    <div class="home-img">
+      <img src="{% static '/images/Profilfoto_Kilian_Duewiger.jpeg' %}" alt="A friendly profile picture of Kilian Duewiger">
+    </div>
+</section>
+
+<section class="education" id="education">
+  <h2 class="heading">Education</h2>
+  <div class="timeline-items">
+
+    <div class="timeline-item">
+      <div class="timeline-dot">
+        <div class="timeline-date">2020</div>
+        <div class="timeline-content">
+          <h3>High School</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At provident soluta itaque illum praesentium perferendis nobis ducimus ipsam temporibus! Harum deleniti voluptatibus similique reprehenderit incidunt magnam repellendus facilis aut cupiditate?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot">
+        <div class="timeline-date">2021</div>
+        <div class="timeline-content">
+          <h3>High School</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At provident soluta itaque illum praesentium perferendis nobis ducimus ipsam temporibus! Harum deleniti voluptatibus similique reprehenderit incidunt magnam repellendus facilis aut cupiditate?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot">
+        <div class="timeline-date">2022</div>
+        <div class="timeline-content">
+          <h3>High School</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At provident soluta itaque illum praesentium perferendis nobis ducimus ipsam temporibus! Harum deleniti voluptatibus similique reprehenderit incidunt magnam repellendus facilis aut cupiditate?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot">
+        <div class="timeline-date">2023</div>
+        <div class="timeline-content">
+          <h3>High School</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At provident soluta itaque illum praesentium perferendis nobis ducimus ipsam temporibus! Harum deleniti voluptatibus similique reprehenderit incidunt magnam repellendus facilis aut cupiditate?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot">
+        <div class="timeline-date">2024</div>
+        <div class="timeline-content">
+          <h3>High School</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At provident soluta itaque illum praesentium perferendis nobis ducimus ipsam temporibus! Harum deleniti voluptatibus similique reprehenderit incidunt magnam repellendus facilis aut cupiditate?</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 {% endblock content %}

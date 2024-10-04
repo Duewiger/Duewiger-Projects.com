@@ -1,16 +1,32 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}Duewiger Projects - Kontakt{% endblock title %}
+{% block title %}Duewiger Projects - Contact{% endblock title %}
 
 {% block content %}
-<div class="container my-5">
-  <h2 class="contact-headline">Kontaktieren Sie mich gerne per Mail</h2>
+
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
+
   <form method="post">
     {% csrf_token %}
-    {{ form|crispy }}
-    <br/>
-    <input class="btn btn-outline-info submit-button" type="submit" value="Senden">
+    <div class="input-group">
+      <div class="input-box">
+        {{ form.name|as_crispy_field }}
+        {{ form.email|as_crispy_field }}
+      </div>
+      <div class="input-box">
+        {{ form.phone|as_crispy_field }}
+        {{ form.subject|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="input-group-2">
+      {{ form.message|as_crispy_field }}
+      {{ form.captcha|as_crispy_field }}
+      <input type="submit" value="Send Message" class="btn">
+    </div>
   </form>
-</div>
+</section>
+
 {% endblock content %}

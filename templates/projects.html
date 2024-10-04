@@ -1,0 +1,37 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Duewiger Projects - Current Projects{% endblock title %}
+
+{% block content %}
+
+<section class="projects-cards" id="projects-cards">
+  <div class="projects-box">
+    <h2 class="heading">Current Projects</h2>
+
+    <div class="wrapper">
+
+      <div class="projects-item">
+        <img src="{% static 'images/InsurNative-Logo.png' %}" alt="">
+        <h2>InsurNative</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At provident soluta itaque illum praesentium perferendis nobis ducimus ipsam temporibus! Harum deleniti voluptatibus similique reprehenderit incidunt magnam repellendus facilis aut cupiditate?</p>
+      </div>
+
+      <div class="projects-item">
+        <img src="{% static 'images/InsurAdmin-Logo.png' %}" alt="">
+        <h2>InsurAdmin</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At provident soluta itaque illum praesentium perferendis nobis ducimus ipsam temporibus! Harum deleniti voluptatibus similique reprehenderit incidunt magnam repellendus facilis aut cupiditate?</p>
+      </div>
+
+      <div class="projects-item">
+        <img src="{% static 'images/kasgo_logo_300.png' %}" alt="">
+        <h2>Kasgo</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At provident soluta itaque illum praesentium perferendis nobis ducimus ipsam temporibus! Harum deleniti voluptatibus similique reprehenderit incidunt magnam repellendus facilis aut cupiditate?</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock content %}

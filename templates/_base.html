@@ -5,76 +5,66 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Duewiger Projects - Software Development{% endblock title %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- My CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- Google reCaptcha -->
     <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <!-- WhatsApp Chat-Button -->
+    <a href="https://wa.me/+491727452773/?text=Hallo%20Herr%20Duewiger,%20gerne%20möchte%20ich%20Sie%20als%20Freelancer%20für%20die%20Entwicklung%20beauftragen." class="float" target="_blank">
+        <i class='bx bxl-whatsapp' ></i>
+    </a>
 </head>
-<body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top sticky-top p-4 transparent-nav">
-        <div class="container-fluid">
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample08">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">Projekte</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/developer/' %}active{% endif %}" href="{% url 'developer' %}">Entwickler</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" href="{% url 'contact' %}">Kontakt</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/imprint/' %}active{% endif %}" href="{% url 'imprint' %}">Impressum</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/privacy/' %}active{% endif %}" href="{% url 'privacy' %}">Datenschutz</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>    
+<body>
 
-    <main class="flex-grow-1">
-        {% block content %}{% endblock content %}
-    </main>
+    <header class="header">
+        <a href="{% url 'home' %}" class="logo">Kilian<span> Duewiger</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
 
-    <footer class="d-flex flex-wrap justify-content-around align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <p class="text-muted copyright-text">© 2024 Duewiger<br></p>
+        <nav class="navbar">
+            <!-- Home => Entwicklerbeschreibung, Education, Programmiersprachen, Tools ... -->
+            <a class="{% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">Home</a>
+            <a class="{% if request.path == '/projects/' %}active{% endif %}" href="{% url 'projects' %}">Projects</a>
+            <a class="{% if request.path == '/services/' %}active{% endif %}" href="{% url 'services' %}">Services</a>
+            <a class="{% if request.path == '/contact/' %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
+            <a class="{% if request.path == '/imprint/' %}active{% endif %}" href="{% url 'imprint' %}">Imprint</a>
+            <a class="{% if request.path == '/privacy/' %}active{% endif %}" href="{% url 'privacy' %}">Privacy</a>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock content %}
+
+    <footer class="footer">
+        <div class="social">
+            <a href="https://github.com/Duewiger"><i class='bx bxl-github'></i></a>
+            <a href="https://www.youtube.com/@Duewiger"><i class='bx bxl-youtube'></i></a>
+            <a href="https://www.linkedin.com/in/kilian-düwiger-6a235b328/"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://play.google.com"><i class='bx bxl-play-store'></i></a>
         </div>
-    
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex p-4">
-            <li class="ms-3 social-icon">
-                <a href="https://linkedin.com">
-                    <i class="fab fa-linkedin" style="font-size: 32px; color: #0077b5;"></i>
-                </a>
-            </li>
-            <li class="ms-3 social-icon">
-                <a href="https://github.com/Duewiger">
-                    <i class="fab fa-github" style="font-size: 32px; color: #333;"></i>
-                </a>
-            </li>
-            <li class="ms-3 social-icon">
-                <a href="https://play.google.com">
-                    <i class="fab fa-google-play" style="font-size: 32px; color: #34A853;"></i>
-                </a>
-            </li>
-        </ul>               
+
+        <ul class="list">
+            <li><a href="{% url 'imprint' %}">Imprint</a></li>
+            <li><a href="{% url 'privacy' %}">Privacy</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <p class="copyright">
+            © Duewiger UG | All Rights Reserved
+        </p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- My JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
     <script>
-        
-        const playStoreState = () => {
-            window.alert("Diese App ist leider noch nicht vom PlayStore freigegeben, erscheint jedoch in Kürze.");
-        };
+        //////////////// !Maintenance Warning!/////////////////////////////////
+        window.alert("!ATTENTION! This website is under maintenance until October 6th, 2024. Technical errors may occur.")
+        //////////////////////////////////////////////////////////////////////
 
+        const playStoreState = () => {
+            window.alert("Unfortunately, this app has not yet been released by the PlayStore, but will be released shortly.");
+        };
     </script>
 </body>
 </html>
