@@ -24,7 +24,6 @@
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav class="navbar">
-            <!-- Home => Entwicklerbeschreibung, Education, Programmiersprachen, Tools ... -->
             <a class="{% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">Home</a>
             <a class="{% if request.path == '/projects/' %}active{% endif %}" href="{% url 'projects' %}">Projects</a>
             <a class="{% if request.path == '/services/' %}active{% endif %}" href="{% url 'services' %}">Services</a>
@@ -58,12 +57,12 @@
     <!-- My JavaScript -->
     <script src="{% static 'js/main.js' %}"></script>
     <script>
-        //////////////// !Maintenance Warning!/////////////////////////////////
+        {% comment %} //////////////// !Maintenance Warning!/////////////////////////////////
         window.alert("!ATTENTION! This website is under maintenance until October 6th, 2024. Technical errors may occur.")
-        //////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////// {% endcomment %}
 
         const playStoreState = () => {
-            window.alert("Unfortunately, this app has not yet been released by the PlayStore, but will be released shortly.");
+            window.alert("Unfortunately, this app has not yet been released by the PlayStore, but will be released shortly. Meanwhile you can check the demo on youtube.");
         };
     </script>
 </body>

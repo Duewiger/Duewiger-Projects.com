@@ -148,7 +148,7 @@ STATIC_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.eu-central-1.amazonaws.com/s
 
 # Media Files via S3
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-MEDIA_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.eu-central-1.amazonaws.com/media"
+MEDIA_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.eu-central-1.amazonaws.com/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 

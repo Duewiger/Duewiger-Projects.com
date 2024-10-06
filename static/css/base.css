@@ -1,3 +1,5 @@
+/* GENERAL SETTINGS */
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +27,8 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
+
+/* TOP NAVIGATION */
 
 .header {
   position: fixed;
@@ -77,6 +81,8 @@ body {
   display: none;
 }
 
+/* HOME SECTION */
+
 section {
   min-height: 100vh;
   padding: 10rem 12% 10rem;
@@ -86,7 +92,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15rem;
+  gap: 20rem;
 }
 
 .home-content {
@@ -166,6 +172,16 @@ span {
   transform: scale(1.3)translateY(-5px);
   box-shadow: 0 0 25px var(--main-color);
   background-color: var(--main-color);
+}
+
+.social-icon--disabled {
+  color: #a5a5a5 !important;
+  border: 2px solid #a5a5a5 !important;
+}
+
+.social-icon--disabled:hover {
+    box-shadow: none !important;
+    background-color: black !important;
 }
 
 .btn {
@@ -288,6 +304,8 @@ span {
   }
 }
 
+/* EDUCATION SECTION */
+
 .heading {
   font-size: 8rem;
   text-align: center;
@@ -300,7 +318,7 @@ span {
 }
 
 .education h2 {
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
 }
 
 .timeline-items {
@@ -332,11 +350,12 @@ span {
 
 .timeline-item:nth-child(odd) {
   padding-right: calc(50% + 30px);
-  text-align: left;
+  text-align: right;
 }
 
 .timeline-item:nth-child(even) {
   padding-left: calc(50% + 30px);
+  text-align: left;
 }
 
 .timeline-dot {
@@ -361,7 +380,7 @@ span {
 .timeline-content {
   background-color: var(--bg-color);
   border: 3px solid var(--main-color);
-  padding: 60px 100px;
+  padding: 30px 50px;
   border-radius: 4rem;
   box-shadow: 0 0 10px var(--main-color);
   cursor: pointer;
@@ -382,10 +401,10 @@ span {
 
 .timeline-content p {
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 22px;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -399,6 +418,8 @@ span {
   background-color: var(--bg-color);
   width: 10px;
 }
+
+/* SERVICES SECTION */
 
 .services {
   background: var(--bg-color);
@@ -457,6 +478,16 @@ span {
   margin: auto;
 }
 
+.service-text-web {
+  display: block;
+}
+
+.service-text-mobile {
+  display: none;
+}
+
+/* PROJECTS SECTION */
+
 .projects-cards {
   background-color: var(--second-bg-color);
 }
@@ -494,14 +525,14 @@ span {
   border: 3px solid rgba(238, 238, 238, 0.2);
   border-radius: 2rem;
   margin: 0 2rem;
-  padding: 30px 60px;
+  padding: 60px 60px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 1.5rem;
+  gap: 3rem;
   transition: 0.4s ease-in-out;
 }
 
@@ -519,7 +550,13 @@ span {
   font-size: 1.8rem;
 }
 
-/* WhatsApp Float Button */
+.social-check {
+  color: #a5a5a5;
+  font-size: 1.4rem !important;
+}
+
+/* WHATSAPP FLOAT BUTTON */
+
 .float{
   position:fixed;
   width:55px;
@@ -549,11 +586,7 @@ span {
   margin-top:16px;
 }
 
-/* Google reCaptcha */
-.g-recaptcha {
-  background-color: transparent;
-  border: none;
-}
+/* CONTACT SECTION */
 
 .contact {
   background-color: var(--bg-color);
@@ -575,6 +608,7 @@ span {
 
 .contact form .input-box {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -595,6 +629,115 @@ span {
 .contact form .btn {
   margin-top: 2rem;
 }
+
+.contact .input-box label {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.input-group-2 label {
+  font-size: 1.8rem;
+}
+
+.right-align {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* GOOGLE RECAPTCHA */
+
+.g-recaptcha {
+  background-color: transparent;
+  border: none;
+  transform: scale(1.2);
+  transform-origin: top right;
+}
+
+.right-align label {
+  display: none;
+}
+
+/* SUCCESS SECTION */
+
+.success-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-bg-color);
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-color);
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 25px var(--main-color);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.success-message i {
+  font-size: 5rem;
+  color: var(--main-color);
+  margin-bottom: 2rem;
+}
+
+.heading-success {
+  font-size: 4rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.text-content-large {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+/* IMPRINT + PRIVACY SECTION */
+
+.heading-imprint {
+  font-size: 6rem;
+  padding: 2rem;
+}
+
+.text-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding: 2rem;
+}
+
+.text-content-large {
+  font-size: 2.4rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+
+/* FOOTER NAVIGATION */
 
 .footer {
   position: relative;
@@ -662,7 +805,8 @@ span {
   color: white;
 }
 
-/* Media Queries */
+/* MEDIA QUERIES 1285PX */
+
 @media (max-width: 1285px) {
   html {
     font-size: 55%;
@@ -674,6 +818,8 @@ span {
     margin: 0 5rem;
   }
 }
+
+/* MEDIA QUERIES 991PX */
 
 @media (max-width: 991px) {
   header {
@@ -699,6 +845,33 @@ span {
   .services {
     padding-bottom: 7rem;
   }
+
+  .service-box {
+    height: 250px;
+  }
+
+  .service-box .service-info {
+    gap: 2rem;
+  }
+
+  .service-info h4 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  .service-info p {
+    font-size: 2rem;
+    line-height: 1.2;
+  } 
+
+  .service-text-web {
+    display: none;
+  }
+  
+  .service-text-mobile {
+    display: block;
+  }
+
   .projects-cards .wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -709,6 +882,8 @@ span {
     padding: 2rem 3%;
   }
 }
+
+/* MEDIA QUERIES 895PX */
 
 @media (max-width: 895px) {
   #menu-icon {
@@ -739,12 +914,13 @@ span {
   .home {
     flex-direction: column-reverse;
     margin: 5rem 4rem;
+    gap: 5rem;
   }
   .home-content h3 {
     font-size: 2.6rem;
   }
   .home-content h1 {
-    font-size: 8rem;
+    font-size: 6rem;
     margin-top: 3rem;
   }
   .home-content p {
@@ -759,5 +935,14 @@ span {
   }
   .services-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .heading-imprint {
+    font-size: 4rem !important;
+  }
+  
+  .text-content-large {
+    font-size: 1.6rem;
+    margin-top: 2rem;
   }
 }

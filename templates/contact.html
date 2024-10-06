@@ -14,8 +14,6 @@
       <div class="input-box">
         {{ form.name|as_crispy_field }}
         {{ form.email|as_crispy_field }}
-      </div>
-      <div class="input-box">
         {{ form.phone|as_crispy_field }}
         {{ form.subject|as_crispy_field }}
       </div>
@@ -23,8 +21,10 @@
 
     <div class="input-group-2">
       {{ form.message|as_crispy_field }}
-      {{ form.captcha|as_crispy_field }}
-      <input type="submit" value="Send Message" class="btn">
+      <div class="right-align">
+        {{ form.captcha|as_crispy_field }}
+        <input type="submit" value="Send Message" class="btn">
+      </div>
     </div>
   </form>
 </section>

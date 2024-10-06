@@ -1,92 +1,73 @@
 {% extends '_base.html' %}
 {% load static %}
 
-{% block title %}Duewiger Projects - Datenschutz{% endblock title %}
+{% block title %}Duewiger Projects - Privacy{% endblock title %}
 
 {% block content %}
-<div class="container">
-    <div class="content">
-    <h2 class="text-content">
-        Datenschutzerklärung der InsurNative App der Duewiger Easy UG
-    </h2>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        Verantwortlich für die Verarbeitung der personenbezogenen Daten im Rahmen dieser App ist:
-    </p>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        Duewiger Easy UG (haftungsbeschränkt)<br>Inhaber und Geschäftsführer: Kilian Düwiger<br>Rissener Dorfstraße 51<br>22559 Hamburg<br>E-Mail: datenschutz@duewiger.com<br>Telefon: +49 (0) 172 745 27 73<br>Website: www.duewiger-projects.com
-    </p>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        Registergericht: Amtsgericht Hamburg<br>
-        Handelsregister: HRB 183240<br>
-        Steuernummer: 42/716/02591<br>
-    </p>
-    <br><br>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        <strong>1. Allgemeine Informationen</strong><br><br>
-        Der Schutz Ihrer personenbezogenen Daten hat für uns einen hohen Stellenwert. In dieser Datenschutzerklärung informieren wir Sie darüber, welche personenbezogenen Daten im Rahmen der Nutzung unserer App erhoben, verarbeitet und gespeichert werden, sowie über Ihre Rechte als betroffene Person.
-    </p>
-    <br><br>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        <strong>2. Zweck der App und der Datenerhebung</strong><br><br>
-        Unsere App ermöglicht es den Nutzern, Versicherungsdokumente per Kamera zu scannen und automatisch übersetzen zu lassen. Die Nutzung der Kamera ist erforderlich, um Dokumente zu erfassen, die dann über ein Backend in der AWS-Cloud verarbeitet und gespeichert werden. Die Übersetzungen erfolgen über die ChatGPT API, und die Dokumente werden in einer AWS-Datenbank und in AWS-S3-Buckets gespeichert.
-    </p>
-    <br><br>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        <strong>3. Erhebung und Verarbeitung personenbezogener Daten</strong><br><br>
-        a. Kamera-Zugriff
-        Die App benötigt Zugriff auf die Kamera, um Dokumente zu scannen. Dieser Zugriff erfolgt ausschließlich zu dem Zweck, das jeweilige Dokument zu erfassen und zur weiteren Verarbeitung an unser Backend zu senden.
-        <br><br>
-        b. Verarbeitung durch das Django-Backend auf AWS
-        Die gescannten Dokumente werden nach der Aufnahme an unser Django-Backend gesendet, das auf AWS-Servern in Docker-Containern läuft. Dort werden die Daten verarbeitet, um die Übersetzung zu ermöglichen.
-        <br><br>
-        c. Speicherung in AWS-Datenbanken und S3-Buckets
-        Die gescannten Dokumente und deren Übersetzungen werden in unserer AWS-Datenbank gespeichert. Zudem werden die übersetzten Dokumente in AWS S3-Buckets gespeichert, um den Nutzern den Zugriff auf die übersetzten Dokumente zu ermöglichen. Diese Speicherung erfolgt auf unbestimmte Zeit oder bis der Nutzer die Löschung der Daten anfordert.
-        <br><br>
-        d. Übermittlung an die ChatGPT API
-        Die gescannten Dokumente werden zur Übersetzung an die ChatGPT API übermittelt. Die Daten werden nur für den Zweck der Übersetzung verwendet und anschließend an unser Backend zurückgesendet. Wir haben keinen Einfluss auf die Datenverarbeitung durch die ChatGPT API, die ein externer Dienst ist.
-        <br><br>
-        e. Lokale Speicherung
-        Zusätzlich zur Speicherung auf unseren Servern wird den Nutzern die Möglichkeit geboten, die übersetzten Dokumente als PDF-Dateien lokal auf ihrem Gerät zu speichern.
-    </p>
-    <br><br>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        <strong>4. Weitergabe von Daten</strong><br><br>
-        Es erfolgt keine Weitergabe der erfassten Daten an Dritte, außer für die Verarbeitung durch die ChatGPT API und die Speicherung in der AWS-Cloud. Die Daten werden ausschließlich für den oben beschriebenen Zweck verarbeitet und weder zu Werbezwecken noch zu Analysezwecken verwendet.
-    </p>
-    <br><br>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        <strong>5. Ihre Rechte als betroffene Person</strong><br><br>
-        Sie haben das Recht:
-        <br><br>
-        Auskunft: Informationen über die von uns verarbeiteten personenbezogenen Daten zu erhalten.
-        Berichtigung: Unrichtige Daten korrigieren zu lassen.
-        Löschung: Die Löschung Ihrer bei uns gespeicherten Daten zu verlangen, sofern diese nicht mehr benötigt werden.
-        Widerspruch: Der Verarbeitung Ihrer Daten zu widersprechen.
-        Zur Ausübung dieser Rechte können Sie uns unter den oben genannten Kontaktdaten erreichen.
-    </p>
-    <br><br>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        <strong>6. Datensicherheit</strong><br><br>
-        Wir setzen technische und organisatorische Maßnahmen ein, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Verlust oder Zerstörung zu schützen. Die Verarbeitung der Daten erfolgt über verschlüsselte Verbindungen (z. B. SSL/TLS).
-    </p>
-    <br><br>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        <strong>7. Änderungen der Datenschutzerklärung</strong><br><br>
-        Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren, um sie an geänderte rechtliche Anforderungen oder neue Funktionen unserer App anzupassen.
-    </p>
-    <br><br>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        <strong>8. Kontakt</strong><br><br>
-        Falls Sie Fragen zu dieser Datenschutzerklärung haben oder Ihre Rechte ausüben möchten, können Sie uns über folgende Kontaktdaten erreichen:
-    </p>
-    <p class="text-start lh-sm fw-normal fs-3 text-content">
-        Duewiger Easy UG (haftungsbeschränkt)<br>
-        Inhaber und Geschäftsführer: Kilian Düwiger<br>
-        Rissener Dorfstraße 51<br>
-        22559 Hamburg<br>
-        E-Mail: datenschutz@duewiger.com<br>
-        Telefon: +49 (0) 172 745 27 73<br>
-    </p>
+<section class="imprint-section">
+    <div class="content text-centered">
+        <h2 class="heading heading-imprint">Privacy Policy</h2>
+        
+        <p class="text-content-large">
+            Responsible for the processing of personal data within the scope of this app:<br><br>
+            Duewiger Easy UG (limited liability)<br>
+            Owner and Managing Director: Kilian Düwiger<br>
+            Rissener Dorfstraße 51<br>
+            22559 Hamburg<br>
+            Email: datenschutz@duewiger.com<br>
+            Phone: +49 (0) 172 745 27 73<br>
+            Website: www.duewiger-projects.com<br><br>
+            Register Court: Hamburg District Court<br>
+            Commercial Register: HRB 183240<br>
+            Tax Number: 42/716/02591<br><br>
+            <strong>1. General Information</strong><br><br>
+            The protection of your personal data is of great importance to us. This privacy policy informs you about which personal data is collected, processed, and stored when using our app, as well as your rights as a data subject.<br><br>
+            
+            <strong>2. Purpose of the App and Data Collection</strong><br><br>
+            Our app allows users to scan insurance documents using the camera and have them automatically translated. The use of the camera is necessary to capture documents, which are then processed and stored via a backend in the AWS Cloud. Translations are carried out using the ChatGPT API, and the documents are stored in an AWS database and in AWS S3 buckets.<br><br>
+            
+            <strong>3. Collection and Processing of Personal Data</strong><br><br>
+            a. Camera Access<br>
+            The app requires access to the camera to scan documents. This access is used solely for the purpose of capturing the document and sending it to our backend for further processing.<br><br>
+            
+            b. Processing by the Django Backend on AWS<br>
+            The scanned documents are sent to our Django backend, which runs on AWS servers in Docker containers. The data is processed there to enable translation.<br><br>
+            
+            c. Storage in AWS Databases and S3 Buckets<br>
+            The scanned documents and their translations are stored in our AWS database. Additionally, the translated documents are stored in AWS S3 buckets to provide users with access to the translated documents. This storage is maintained indefinitely or until the user requests data deletion.<br><br>
+            
+            d. Transmission to the ChatGPT API<br>
+            The scanned documents are transmitted to the ChatGPT API for translation. The data is used solely for the purpose of translation and then sent back to our backend. We have no control over data processing by the ChatGPT API, which is an external service.<br><br>
+            
+            e. Local Storage<br>
+            In addition to storage on our servers, users are offered the option to save the translated documents locally on their device as PDF files.<br><br>
+            
+            <strong>4. Data Disclosure</strong><br><br>
+            The collected data is not disclosed to third parties, except for processing by the ChatGPT API and storage in the AWS Cloud. The data is processed exclusively for the purpose described above and is not used for advertising or analysis purposes.<br><br>
+            
+            <strong>5. Your Rights as a Data Subject</strong><br><br>
+            You have the right to:<br><br>
+            Access: Receive information about the personal data we process.<br>
+            Rectification: Have incorrect data corrected.<br>
+            Erasure: Request the deletion of your data stored with us if it is no longer needed.<br>
+            Objection: Object to the processing of your data.<br>
+            You can exercise these rights by contacting us using the contact details provided above.<br><br>
+            
+            <strong>6. Data Security</strong><br><br>
+            We implement technical and organizational measures to protect your personal data from unauthorized access, loss, or destruction. Data processing is carried out via encrypted connections (e.g., SSL/TLS).<br><br>
+            
+            <strong>7. Changes to the Privacy Policy</strong><br><br>
+            We reserve the right to update this privacy policy to comply with legal requirements or to reflect changes in our app's functionality.<br><br>
+            
+            <strong>8. Contact</strong><br><br>
+            If you have questions about this privacy policy or wish to exercise your rights, you can reach us using the following contact details:<br><br>
+            Duewiger Easy UG (limited liability)<br>
+            Owner and Managing Director: Kilian Düwiger<br>
+            Rissener Dorfstraße 51<br>
+            22559 Hamburg<br>
+            Email: datenschutz@duewiger.com<br>
+            Phone: +49 (0) 172 745 27 73<br>
+        </p>
     </div>
-</div>
+</section>
 {% endblock content %}
